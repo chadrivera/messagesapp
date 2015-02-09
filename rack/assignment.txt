@@ -1,0 +1,16 @@
+Assignment:
+
+Messages
+
+[Prints here after submit] + Timestamp
+
+  [Form to leave new message]
+  [submit]
+
+  ...All in Messages controller (two actions) -- show/get and post
+
+session[:messages] = []
+
+{message: blah,
+ time: time
+ }

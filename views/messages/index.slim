@@ -1,0 +1,46 @@
+title Message App
+p Post your messages here
+/ Build value fr horrible hack
+
+p
+  form method="POST" name="newmessage"
+    h2 Name
+    textarea name="name" rows="1" cols="40"
+    br
+    h2 Message:
+    textarea name="newmessage" rows="8" cols="40"
+    br
+    input type="submit" value="Post new message"
+/ p Keys
+/ ul
+/   - @request.session.keys.each do |key|
+/     li #{key}
+p Historical messages:
+
+- if @request.session[:messages]
+  table border=1 style="width:100%"
+    tr
+      th Sender
+      th Message
+      th Time
+    - @request.session[:messages].each do |msg|
+        tr
+          td #{msg[:name]}
+          td #{msg[:message]}
+          td #{msg[:time]}
+- else
+  = "No Messages"
+  / - if @request.session[:messages].present?
+  /     table
+  /       tr
+  /         th Sender
+  /         th Message
+  /         th Time
+  /   - @request.session[:messages].each do |msg|
+  /           td #{msg}[:name]
+  /           td #{msg}[:message]
+  /           td #{msg}[:time]
+  /
+  / -else
+  /   - @request.session[:messages] = []
+  /   = "No messages"
