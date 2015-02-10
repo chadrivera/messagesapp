@@ -6,6 +6,9 @@ class Router
       if request.path == '/about'
         controller = AboutController.new(request)
         controller.show
+      elsif request.path == '/'
+        controller = HomeController.new(request)
+        controller.show
       elsif request.path =~ /^\/bios\/.+/
         controller = BiosController.new(request)
         controller.show

@@ -1,6 +1,6 @@
 class DefaultController < ApplicationController
 
   def show
-    render "application/index"
+    redirect_to "/"
   end
 end

@@ -11,6 +11,7 @@ require 'bios_controller'
 require 'router'
 require 'application'
 require 'default_controller'
+require 'home_controller'
 # Router
 
 # get "/about" => "about#index"
