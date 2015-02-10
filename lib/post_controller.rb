@@ -11,8 +11,9 @@ class PostController < ApplicationController
       @request.session[:messages] = []
     end
     @request.session[:messages] << save
-
-    render "messages/index"
+    #always redirect after post
+    #render "messages/index"
+    redirect_to "/"
   end
 
 

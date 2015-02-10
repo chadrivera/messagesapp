@@ -4,9 +4,9 @@ class Application
   end
   def call(env)
 
-    response = @router.route(Rack::Request.new(env))
+    @router.route(Rack::Request.new(env))
 
-    ['200',{},[response]]
+    #['200',{},[response]]
   end
 
 
