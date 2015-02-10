@@ -3,11 +3,17 @@ class Router
   def route(request)
 
     if request.get?
-      if request.path == '/'
+      if request.path == '/about'
+        controller = AboutController.new(request)
+        controller.show
+      elsif request.path =~ /^\/bios\/.+/
+        controller = BiosController.new(request)
+        controller.show
+      elsif request.path == '/messages'
         controller = MessagesController.new(request)
         controller.show
-      else #yes, I know this is a useless else
-        controller = MessagesController.new(request)
+      else
+        controller = DefaultController.new(request)
         controller.show
       end
 

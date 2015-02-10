@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def show
-    "About us!"
+    render "application/index"
   end
 end

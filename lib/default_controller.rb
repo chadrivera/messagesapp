@@ -1,6 +1,6 @@
 class DefaultController < ApplicationController
 
   def show
-    "Something else?"
+    render "application/index"
   end
 end

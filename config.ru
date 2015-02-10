@@ -6,8 +6,11 @@ require 'slim'
 require 'application_controller'
 require 'post_controller'
 require 'messages_controller'
+require 'about_controller'
+require 'bios_controller'
 require 'router'
 require 'application'
+require 'default_controller'
 # Router
 
 # get "/about" => "about#index"
