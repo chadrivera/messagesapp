@@ -9,7 +9,7 @@ class Router
       elsif request.path =~ /^\/bios\/.+/
         controller = BiosController.new(request)
         controller.show
-      elsif request.path == '/messages'
+      elsif request.path =~ /\/messages\/{0,1}/
         controller = MessagesController.new(request)
         controller.show
       else

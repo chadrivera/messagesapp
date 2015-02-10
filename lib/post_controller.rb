@@ -13,7 +13,7 @@ class PostController < ApplicationController
     @request.session[:messages] << save
     #always redirect after post
     #render "messages/index"
-    redirect_to "/"
+    redirect_to "/messages"
   end
 
 
